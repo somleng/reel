@@ -20,5 +20,4 @@ group :test do
   gem 'websocket_parser', '>= 0.1.6'
   gem 'rake'
   gem 'rspec'
-  gem 'coveralls', require: false
 end

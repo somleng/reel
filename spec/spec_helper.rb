@@ -1,6 +1,3 @@
-require 'coveralls'
-Coveralls.wear!
-
 require 'bundler/setup'
 require 'reel'
 require 'pry'
@@ -16,7 +13,9 @@ end
 require 'support/example_request'
 require 'support/create_certs'
 
-RSpec.configure(&:disable_monkey_patching!)
+RSpec.configure do |config|
+  config.example_status_persistence_file_path = "spec/examples.txt"
+end
 
 logfile = File.open(File.expand_path("../../log/test.log", __FILE__), 'a')
 Celluloid.logger = Logger.new(logfile)

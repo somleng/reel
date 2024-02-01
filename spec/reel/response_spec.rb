@@ -27,7 +27,7 @@ RSpec.describe Reel::Response do
       connection.close
 
       response = client.read(4096)
-      expect(response["Content-Type: application/json"]).to_not be_nil
+      expect(response["content-type: application/json"]).to_not be_nil
     end
   end
 end
